@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Exam Integrity Awareness</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #1e1b4b;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+        /* BANNER OVERLAY */
+        .banner-overlay {
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.65),
+                rgba(0,0,0,0.45)
+            );
+        }
+
+        /* INFO CARDS */
+        .info-card {
+            border: 1px solid #e5e7eb;
+            border-left: 6px solid #1e1b4b;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            background: linear-gradient(to bottom right, #ffffff, #f9fafb);
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.14);
+            border-left-color: #4338ca;
+        }
+    </style>
+</head>
+
+<body class="p-6">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar max-w-7xl mx-auto px-6 py-4 flex items-center justify-between rounded-2xl relative">
+
+    <!-- LEFT: LOGO + EXTRA SMALL COLLEGE TEXT -->
+    <div class="flex items-center gap-3">
+        <img src="nm_logo.png" alt="College Logo" class="h-16 md:h-20 w-auto">
+
+        <div class="leading-tight hidden md:block max-w-xs">
+            <p class="text-[10px] text-gray-300">
+                Shri Vile Parle Kelavani Mandal's
+            </p>
+            <p class="text-xs font-semibold text-white tracking-wide">
+                NARSEE MONJEE COLLEGE OF
+            </p>
+            <p class="text-xs font-semibold text-white tracking-wide">
+                COMMERCE & ECONOMICS (AUTONOMOUS)
+            </p>
+            <p class="text-[10px] text-gray-300">
+                NAAC Accredited 'A', CGPA: 3.42
+            </p>
+            <p class="text-[10px] text-gray-300">
+                Affiliated to University of Mumbai
+            </p>
+        </div>
+    </div>
+
+    <!-- CENTER TITLE -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+        <span class="text-xl md:text-2xl font-extrabold text-yellow-400 tracking-widest uppercase">
+            Examination Ethics
+        </span>
+    </div>
+
+    <!-- RIGHT MENU -->
+    <div class="relative">
+        <button onclick="toggleMenu()"
+                class="text-white text-2xl px-4 py-2 hover:bg-indigo-700 rounded-xl transition">
+            ⋮
+        </button>
+
+        <div id="menuDropdown"
+             class="hidden absolute right-0 mt-3 w-52 bg-white rounded-xl shadow-xl overflow-hidden z-50">
+
+            <a href="./index.html" class="block px-5 py-3 hover:bg-indigo-100 font-semibold">Home</a>
+            <a href="./monitoring.html" class="block px-5 py-3 hover:bg-indigo-100 font-semibold">Monitoring</a>
+            <a href="./rules.html" class="block px-5 py-3 hover:bg-indigo-100 font-semibold">Exam Rules</a>
+            <a href="./punishment.html" class="block px-5 py-3 hover:bg-indigo-100 font-semibold">Punishment</a>
+            <a href="./incidents.html" class="block px-5 py-3 hover:bg-indigo-100 font-semibold">Past Incidents</a>
+        </div>
+    </div>
+
+</nav>
+
+<!-- ================= BANNER ================= -->
+<div class="max-w-7xl mx-auto mt-8 relative rounded-2xl overflow-hidden shadow-2xl">
+    <img src="Banner.jpeg" alt="Examination Hall" class="w-full h-[440px] object-cover">
+
+    <div class="absolute inset-0 banner-overlay flex flex-col justify-center items-center text-center px-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-wide">
+            Examination Integrity Awareness
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 max-w-4xl leading-relaxed">
+            Promoting fairness, transparency, and discipline in examinations through
+            strict monitoring, clear rules, defined punishments, and real CCTV-based incidents.
+        </p>
+    </div>
+</div>
+
+<!-- ================= WARNING ================= -->
+<div class="max-w-6xl mx-auto mt-12 bg-yellow-50 border-l-8 border-yellow-500 p-5 rounded-xl text-center font-semibold text-yellow-900 shadow-md">
+    ⚠️ Examination halls are under continuous CCTV surveillance. Any malpractice will be detected and acted upon.
+</div>
+
+<!-- ================= FEATURES ================= -->
+<div class="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <div class="info-card p-7" onclick="location.href='monitoring.html'">
+        <h3 class="text-2xl font-bold text-indigo-900 mb-3">👁️ Monitoring Systems</h3>
+        <p>
+            Learn how CCTV cameras, invigilators, and monitoring technologies
+            ensure transparency and detect unfair practices.
+        </p>
+    </div>
+
+    <div class="info-card p-7" onclick="location.href='rules.html'">
+        <h3 class="text-2xl font-bold text-indigo-900 mb-3">📜 Examination Rules</h3>
+        <p>
+            Understand the official examination rules, permitted materials,
+            conduct guidelines, and student responsibilities.
+        </p>
+    </div>
+
+    <div class="info-card p-7" onclick="location.href='punishment.html'">
+        <h3 class="text-2xl font-bold text-indigo-900 mb-3">⚖️ Punishments</h3>
+        <p>
+            Learn about penalties, academic consequences, and disciplinary actions
+            imposed for using unfair means.
+        </p>
+    </div>
+
+    <div class="info-card p-7" onclick="location.href='incidents.html'">
+        <h3 class="text-2xl font-bold text-indigo-900 mb-3">📷 Past Incidents</h3>
+        <p>
+            Review real incidents detected through CCTV footage and invigilation,
+            highlighting consequences of malpractice.
+        </p>
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="max-w-6xl mx-auto mt-20 text-center text-indigo-900 font-semibold text-lg italic">
+    “ Fairness through continuous monitoring and ethical responsibility. ”
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+    function toggleMenu() {
+        document.getElementById("menuDropdown").classList.toggle("hidden");
+    }
+
+    document.addEventListener("click", function (event) {
+        const menu = document.getElementById("menuDropdown");
+        if (!event.target.closest("button") && !event.target.closest("#menuDropdown")) {
+            menu.classList.add("hidden");
+        }
+    });
+</script>
+
+</body>
+</html>
